@@ -1,6 +1,10 @@
 import { useState } from "preact/hooks"
 
-export default function Greeting({ messages }: { messages: string[] }) {
+interface GreetingProps {
+	messages: string[]
+}
+
+export default function Greeting({ messages }: GreetingProps) {
 	const randomMessage = () =>
 		messages[Math.floor(Math.random() * messages.length)]
 
